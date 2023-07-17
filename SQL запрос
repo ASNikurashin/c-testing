@@ -1,0 +1,12 @@
+CREATE FUNCTION GetBrigadeNumber(@datetime DATETIME)
+RETURNS TABLE
+AS
+RETURN
+    SELECT TOP 1 Team,
+        CASE
+            WHEN DATEPART(HOUR, @datetime) BETWEEN 7 AND 18 THEN 2 -- День
+            ELSE 1 -- Ночь
+        END AS Shift
+    FROM dbo.ShiftEns
+    WHERE CONVERT(DATE, [Datateam]) = CONVERT(DATE, @datetime)
+    ORDER BY ABS(DATEDIFF(HOUR, CAST([Datateam] AS DATETIME), @datetime))
