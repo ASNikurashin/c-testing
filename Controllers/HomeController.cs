@@ -9,11 +9,14 @@ using System.Threading.Tasks;
 using WebApplication2.Domain.Entities;
 using WebApplication2.Domain.Repositories.Abstract;
 using WebApplication2.Models;
+using WebApplication2.Domain;
+using WebApplication2.Domain.Repositories.EntityFramework;
 
 namespace WebApplication2.Controllers
 {
     public class HomeController : Controller
     {
+
 
         //private readonly ILogger<HomeController> _logger;
 
@@ -29,7 +32,7 @@ namespace WebApplication2.Controllers
 
         public IActionResult Privacy()
         {
-            return View();
+            return View()   ;
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

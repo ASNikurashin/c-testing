@@ -52,3 +52,16 @@
 </div>
 </object>
 </article>
+
+@*@using WebApplication2.Domain.Repositories.EntityFramework
+
+@model IQueryable<EFHeatRepository>
+<h1>Entities</h1>
+
+<ul>
+    @foreach (var entity in aModel)
+    {
+        <li>@entity.GetHeatsById(100)</li>
+
+    }
+</ul>*@

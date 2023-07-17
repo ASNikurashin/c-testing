@@ -38,5 +38,7 @@ namespace WebApplication2.Domain.Repositories.EntityFramework
             context.Heat_Works.Remove(new Heat_work() { Id = id });
             context.SaveChanges();
         }
+
+
     }
 }

@@ -53,6 +53,7 @@ namespace WebApplication2.Controllers
                 return RedirectToAction("Index");
             }
 
+
             return View(model);
         }
 
@@ -64,8 +65,9 @@ namespace WebApplication2.Controllers
         //}
 
         public IActionResult Privacy()
-        {
-            return View();
+        { 
+            IHeatRepository heatRepository =  eFHeatRepository;
+            return View(heatRepository.GetHeats());
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

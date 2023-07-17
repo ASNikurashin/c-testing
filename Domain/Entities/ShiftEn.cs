@@ -10,9 +10,6 @@ namespace WebApplication2.Domain.Entities
         [Display(Name = "Бригада")]
         public override int Team { get; set; }
 
-        [Display(Name = "Смена")]
-        public override String Shift { get; set; }
-
         [Display(Name = "Дата")]
         public override DateTime DataTeam { get; set; }
     }

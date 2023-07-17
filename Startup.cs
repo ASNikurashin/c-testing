@@ -36,7 +36,7 @@ namespace WebApplication2
             services.AddTransient<IShiftEnRepository, EFShiftEnRepository>();
             services.AddTransient<IHeatRepository, EFHeatRepository>();
 
-            services.AddTransient<DataManager>();
+            //services.AddTransient<DataManager>();
 
             services.AddDbContext<AppDbContext>(x => x.UseSqlServer(Config.ConnectionString));
 

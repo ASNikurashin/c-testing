@@ -11,9 +11,6 @@ namespace WebApplication2.Domain.Entities
         [Display(Name = "Бригада)")]
         public virtual int Team { get; set; }
 
-        [Display(Name = "Смена")]
-        public virtual String Shift { get; set; }
-
         [Display(Name = "Дата")]
         public virtual DateTime DataTeam { get; set; }
 

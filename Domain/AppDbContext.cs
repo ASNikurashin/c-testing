@@ -17,35 +17,19 @@ namespace WebApplication2.Domain
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<ShiftEn>().HasData(new ShiftEn
-            {
-                Id = 1,
-                Team = 1,
-                Shift = "B",
-                DataTeam = new DateTime(2023, 1, 1)
-            });
-
-            modelBuilder.Entity<ShiftEn>().HasData(new ShiftEn
-            {
-                Id = 2,
-                Team = 2,
-                Shift = "B",
-                DataTeam = new DateTime(2023, 1, 1)
-            });
+            
 
             modelBuilder.Entity<ShiftEn>().HasData(new ShiftEn
             {
                 Id = 3,
                 Team = 3,
-                Shift = "1",
-                DataTeam = new DateTime(2023, 1, 1)
+                DataTeam = new DateTime(2023, 1, 3)
             });
 
             modelBuilder.Entity<ShiftEn>().HasData(new ShiftEn
             {
                 Id = 4,
                 Team = 4,
-                Shift = "2",
                 DataTeam = new DateTime(2023, 1, 1)
             });
 
@@ -53,7 +37,6 @@ namespace WebApplication2.Domain
             {
                 Id = 5,
                 Team = 1,
-                Shift = "1",
                 DataTeam = new DateTime(2023, 1, 2)
             });
 
